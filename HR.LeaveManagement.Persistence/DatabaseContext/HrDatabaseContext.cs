@@ -1,5 +1,6 @@
 ﻿using HR.LeaveManagement.Domain;
 using HR.LeaveManagement.Domain.Common;
+using HR.LeaveManagement.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace HR.LeaveManagement.Persistence.DatabaseContext
@@ -18,14 +19,9 @@ namespace HR.LeaveManagement.Persistence.DatabaseContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(HrDatabaseContext).Assembly);
-            modelBuilder.Entity<LeaveType>().HasData(new LeaveType
-            {
-                Id = 1,
-                Name = "Vacetion",
-                DefaultDays = 10,
-                DateCreated = DateTime.Now,
-                DateModified = DateTime.Now,
-            });
+            //Other Way
+
+            //modelBuilder.ApplyConfiguration(new LeaveTypeConfiguration());
             base.OnModelCreating(modelBuilder);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
