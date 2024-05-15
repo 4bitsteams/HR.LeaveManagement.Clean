@@ -2,7 +2,6 @@
 using HR.LeaveManagement.Application.Contracts.Logging;
 using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.LeaveManagement.Application.Features.LeaveAllocation.Queries.GetAllLeaveAllocations;
-using HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveAllocations;
 using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Queries.GetAllLeaveAllocations
