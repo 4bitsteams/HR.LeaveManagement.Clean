@@ -6,13 +6,13 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Queries.GetAllLeaveAllocations
 {
-    public class GetLeaveAllocationssQueryHandler : IRequestHandler<GetLeaveAllocationsQuery, List<LeaveAllocationDto>>
+    public class GetLeaveAllocationsQueryHandler : IRequestHandler<GetLeaveAllocationsQuery, List<LeaveAllocationDto>>
     {
         private readonly IMapper _mapper;
         private readonly ILeaveAllocationRepository _leaveAllocationsRepository;
-        private readonly IAppLogger<GetLeaveAllocationssQueryHandler> _logger;
+        private readonly IAppLogger<GetLeaveAllocationsQueryHandler> _logger;
 
-        public GetLeaveAllocationssQueryHandler(IMapper mapper, ILeaveAllocationRepository leaveAllocationsRepository, IAppLogger<GetLeaveAllocationssQueryHandler> logger)
+        public GetLeaveAllocationsQueryHandler(IMapper mapper, ILeaveAllocationRepository leaveAllocationsRepository, IAppLogger<GetLeaveAllocationsQueryHandler> logger)
         {
             this._mapper = mapper;
             this._leaveAllocationsRepository = leaveAllocationsRepository;
