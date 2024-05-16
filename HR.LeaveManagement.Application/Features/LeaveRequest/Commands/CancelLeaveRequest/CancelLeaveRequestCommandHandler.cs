@@ -37,7 +37,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands.CancelLe
                 Subject = "Leave Request Cancelled"
             };
 
-            await _emailSender.SendEmail(email);
+            await _emailSender.SendEmailAsync(email);
             return Unit.Value;
         }
     }

@@ -55,7 +55,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands.UpdateLe
                     Subject = "Leave Request Updated"
                 };
 
-                await _emailSender.SendEmail(email);
+                await _emailSender.SendEmailAsync(email);
             }
             catch (Exception ex)
             {

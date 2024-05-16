@@ -45,7 +45,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands.ChangeLe
                 Subject = "Leave Request Approval Status Updated"
             };
 
-            await _emailSender.SendEmail(email);
+            await _emailSender.SendEmailAsync(email);
 
             return Unit.Value;
         }
