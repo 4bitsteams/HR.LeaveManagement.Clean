@@ -1,4 +1,5 @@
-﻿using HR.LeaveManagement.BlazorUI.Contracts;
+﻿using Blazored.LocalStorage;
+using HR.LeaveManagement.BlazorUI.Contracts;
 using HR.LeaveManagement.BlazorUI.Services.Base;
 
 namespace HR.LeaveManagement.BlazorUI.Services
@@ -16,8 +17,8 @@ namespace HR.LeaveManagement.BlazorUI.Services
                 var response = new Response<Guid>();
                 CreateLeaveAllocationCommand createLeaveAllocation = new() { LeaveTypeId = leaveTypeId };
 
-                await _client.LeaveAllocationsPOSTAsync(createLeaveAllocation);
-                return response;
+               await _client.LeaveAllocationsPOSTAsync(createLeaveAllocation);
+               return response;
             }
             catch (ApiException ex)
             {

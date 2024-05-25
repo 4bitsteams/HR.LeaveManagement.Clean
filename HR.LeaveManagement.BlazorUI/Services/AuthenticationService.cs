@@ -1,13 +1,16 @@
-﻿using HR.LeaveManagement.BlazorUI.Contracts;
+﻿using Blazored.LocalStorage;
+using HR.LeaveManagement.BlazorUI.Contracts;
+using HR.LeaveManagement.BlazorUI.Providers;
 using HR.LeaveManagement.BlazorUI.Services.Base;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace HR.LeaveManagement.BlazorUI.Services
 {
     public class AuthenticationService : BaseHttpService, IAuthenticationService
     {
         private readonly AuthenticationStateProvider _authenticationStateProvider;
-        public AuthenticationService(IClient client,
-            ILocalStorageService localStorage,
+        public AuthenticationService(IClient client, 
+            ILocalStorageService localStorage, 
             AuthenticationStateProvider authenticationStateProvider) : base(client, localStorage)
         {
             _authenticationStateProvider = authenticationStateProvider;
@@ -33,7 +36,7 @@ namespace HR.LeaveManagement.BlazorUI.Services
             {
                 return false;
             }
-
+            
         }
         public async Task Logout()
         {
