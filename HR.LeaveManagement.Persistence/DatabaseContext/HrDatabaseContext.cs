@@ -1,6 +1,5 @@
 ﻿using HR.LeaveManagement.Domain;
 using HR.LeaveManagement.Domain.Common;
-using HR.LeaveManagement.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace HR.LeaveManagement.Persistence.DatabaseContext
