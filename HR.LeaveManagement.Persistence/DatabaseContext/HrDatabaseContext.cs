@@ -1,4 +1,5 @@
-﻿using HR.LeaveManagement.Domain;
+﻿using HR.LeaveManagement.Application.Contracts.Identity;
+using HR.LeaveManagement.Domain;
 using HR.LeaveManagement.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,9 +7,11 @@ namespace HR.LeaveManagement.Persistence.DatabaseContext
 {
     public class HrDatabaseContext : DbContext
     {
-        public HrDatabaseContext(DbContextOptions<HrDatabaseContext> options) : base(options)
-        {
+        private readonly IUserService userService;
 
+        public HrDatabaseContext(DbContextOptions<HrDatabaseContext> options, IUserService userService) : base(options)
+        {
+            this.userService = userService;
         }
 
         public DbSet<LeaveType> LeaveTypes { get; set; }
