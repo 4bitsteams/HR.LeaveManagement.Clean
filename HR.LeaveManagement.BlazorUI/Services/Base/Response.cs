@@ -1,4 +1,5 @@
-﻿namespace HR.LeaveManagement.BlazorUI.Services.Base
+﻿#nullable disable
+namespace HR.LeaveManagement.BlazorUI.Services.Base
 {
     public class Response<T>
     {

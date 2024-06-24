@@ -1,4 +1,5 @@
-﻿using HR.LeaveManagement.BlazorUI.Contracts;
+﻿#nullable disable
+using HR.LeaveManagement.BlazorUI.Contracts;
 using HR.LeaveManagement.BlazorUI.Models.LeaveTypes;
 using Microsoft.AspNetCore.Components;
 
