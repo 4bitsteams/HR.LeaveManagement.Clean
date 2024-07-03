@@ -1,4 +1,5 @@
-﻿using HR.LeaveManagement.Application.Contracts.Identity;
+﻿#nullable disable
+using HR.LeaveManagement.Application.Contracts.Identity;
 using HR.LeaveManagement.Application.Models.Identity;
 using HR.LeaveManagement.Identity.Models;
 using Microsoft.AspNetCore.Http;
